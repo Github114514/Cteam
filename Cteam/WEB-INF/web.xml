@@ -1,0 +1,101 @@
+<web-app>
+
+	<servlet>
+		<servlet-name>c_thread</servlet-name>
+		<jsp-file>/c_thread.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>c_thread</servlet-name>
+		<url-pattern>/c_thread</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>c_res</servlet-name>
+		<jsp-file>/c_res.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>c_res</servlet-name>
+		<url-pattern>/c_res</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CreateThread_Servlet</servlet-name>
+		<servlet-class>CreateThread_Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateThread_Servlet</servlet-name>
+		<url-pattern>/CreateThread_Servlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CreateRes_Servlet</servlet-name>
+		<servlet-class>CreateRes_Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateRes_Servlet</servlet-name>
+		<url-pattern>/CreateRes_Servlet</url-pattern>
+	</servlet-mapping>
+
+
+
+
+	<servlet>
+		<servlet-name>Thread_Servlet</servlet-name>
+		<servlet-class>Thread_Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Thread_Servlet</servlet-name>
+		<url-pattern>/Thread_Servlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>Res_Servlet</servlet-name>
+		<servlet-class>Res_Servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Res_Servlet</servlet-name>
+		<url-pattern>/Res_Servlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SearchThreadServlet</servlet-name>
+		<servlet-class>SearchThreadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchThreadServlet</servlet-name>
+		<url-pattern>/SearchThreadServlet</url-pattern>
+	</servlet-mapping>
+	
+
+
+
+	<!-- <servlet>
+		<servlet-name>SearchThreadServlet</servlet-name>
+		<servlet-class>SearchThreadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchThreadServlet</servlet-name>
+		<url-pattern>/SearchThreadServlet</url-pattern>
+	</servlet-mapping>
+ -->
+
+
+
+
+
+<!--
+	<servlet>
+		<servlet-name></servlet-name>
+		<jsp-file>/</jsp-file>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name></servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+ -->
+
+
+
+</web-app>

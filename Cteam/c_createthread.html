@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="c_createthread.css" rel="stylesheet" >
+	<title>俺の掲示板</title>
+</head>
+<body>
+
+	<div id="all">
+		<header>
+		<img src="img/S__41574403.jpg" width="900px" />
+		</header>
+		<br>
+	<script language="JavaScript">
+		function check(){
+			if(document.formT.title.value == ""){
+				alert("タイトルを入力してください");
+				return false;
+			}
+			if(document.formT.t_name.value == ""){
+				alert("名前を入力してください");
+				return false;
+			}
+			if(document.formT.contents.value == ""){
+				alert("コメントを入力してください");
+				return false;
+			}
+		}
+	</script>
+<div id="threadform">
+	<form name="formT" action = "CreateThread_Servlet" method="post" enctype="multipart/form-data" onSubmit="return check()">
+		<div id="title">
+		タイトル<br><input type="text" name="title"><br>
+		</div>
+		<br>
+		<div id="name">
+		名前<br><input type="text" name="t_name"><br>
+		</div>
+		<br>
+		<div id="contents">
+		内容<br><textarea id="contents" name="contents" cols="80" rows="20" maxlength="500"></textarea><br>
+		</div>
+		画像<input type="file" name="name"><br><br>
+		<input type="submit" value="投稿"id="toukou">
+	</form>
+	<br>
+
+	</div>
+	<div id="itirann">
+	<button onclick="location.href='Thread_Servlet'">スレッド一覧</button>
+</div>
+</div>
+</body>
+</html>

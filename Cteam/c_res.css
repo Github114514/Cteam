@@ -1,0 +1,169 @@
+﻿#res table{
+  counter-reset: rowCount;
+}
+#res table > tbody > tr{
+  counter-increment: rowCount;
+}
+#res table > tbody  > tr > td:first-child::before{
+  content: counter(rowCount);
+}
+body{
+  margin: 0px;
+  padding: 0px;
+  background-image: url(img/back.jpg);
+}
+header{
+
+    border-bottom: 1px solid black;
+
+}
+html{
+
+}
+#all{
+	width : 900px;
+	margin: 0px auto;
+	border-right: 1px solid #000000;
+	border-left:1px solid #000000;
+	background-color: #fff;
+  margin: auto;
+  margin-bottom: 0px;
+	/* 色彩設定はレイアウト変更のために一時変更 */
+}
+ table {
+
+}
+#res table{
+  width: 30%;
+}
+
+#nameform{
+
+}
+
+#nameform form #toukou{
+
+}
+.scroll_res button{
+  height: 60px;
+  width: 130px;
+    position: fixed;
+    display: block;
+    right:50px;
+    bottom:50px;
+    background: #313131;
+    color:#fff;
+    padding:20px;
+}
+#itiranbutton button{
+  height: 60px;
+  width: 130px;
+    position: fixed;
+    display: block;
+    right:50px;
+    bottom:120px;
+    background: #313131;
+    color:#fff;
+    padding:20px;
+}
+#sakuseibutton button{
+    height: 60px;
+    width: 130px;
+    position: fixed;
+    display: block;
+    right:50px;
+    bottom:200px;
+    background: #313131;
+    color:#fff;
+    padding:20px;
+}
+table{
+  width: 100%;
+  border-collapse:separate;
+  border-spacing: 0;
+
+}
+
+table th:first-child{
+  border-radius: 5px 0 0 0;
+}
+
+table th:last-child{
+  border-radius: 0 5px 0 0;
+  border-right: 1px solid #3c6690;
+}
+
+table th{
+  text-align: center;
+  color:white;
+  background: linear-gradient(#555555,#313131);
+  border-left: 1px solid #777777;
+  border-top: 1px solid #777777;
+  border-bottom: 1px solid #777777;
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+  width: 25%;
+  padding: 10px 0;
+}
+
+table td{
+  text-align: center;
+  border-left: 1px solid #a8b7c5;
+  border-bottom: 1px solid #a8b7c5;
+  border-top:none;
+  box-shadow: 0px -3px 5px 1px #eee inset;
+  width: 25%;
+  padding: 10px 0;
+}
+
+table td:last-child{
+  border-right: 1px solid #a8b7c5;
+}
+
+table tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+
+table tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
+.res{
+  border-collapse: separate;
+  border-spacing: 0px 8px ;
+}
+table.res th{
+  text-align: center;
+  color:white;
+  background: linear-gradient(#555555,#313131);
+  border-left: 1px solid #777777;
+  border-top: 1px solid #777777;
+  border-bottom: 1px solid #777777;
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+  width: 5%;
+  padding: 10px 0;
+
+}
+table.res td{
+  width: auto;
+}
+table.res{
+    width: 80%;
+    padding-left: 20%;
+}
+#toukou {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #313131;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #555555;
+  border-radius: 3px;
+}
+#toukou:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+#nameform{
+  padding-left: 20%;
+}

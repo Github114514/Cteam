@@ -1,0 +1,50 @@
+#all{
+	width : 900px;
+	margin: 0px auto;
+	border-right: 1px solid #000000;
+	border-left:1px solid #000000;
+	background-color: #fff;
+	/* 色彩設定はレイアウト変更のために一時変更 */
+	margin: auto;
+}
+header{
+border-bottom: 1px solid black;
+}
+body{
+	margin: 0px;
+	padding: 0px;
+		background-image: url(img/back.jpg);
+}
+#header{
+  background-image: url(img/S__41574403.jpg);/*画像URL */
+   background-repeat: no-repeat;
+}
+#itirann button{
+	height: 60px;
+	width: 130px;
+    position: fixed;
+    display: block;
+    right:50px;
+    bottom:100px;
+    background: #313131;
+    color:#fff;
+    padding:20px;
+}
+#toukou {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #313131;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #555555;
+  border-radius: 3px;
+}
+#toukou:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+#threadform{
+	  padding-left: 20%;
+}
