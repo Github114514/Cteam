@@ -1,13 +1,12 @@
 import java.io.IOException;
 
 import javax.servlet.ServletException;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import lib.Avoidance;
 import database.Res_Insert;
+import lib.Avoidance;
 
 public class CreateRes_Servlet extends HttpServlet{
   public void doPost(HttpServletRequest req, HttpServletResponse res)throws IOException,ServletException{
@@ -27,4 +26,4 @@ public class CreateRes_Servlet extends HttpServlet{
   public void doGet(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException {
     this.doPost(req,res);
   }
-}
+}//q
