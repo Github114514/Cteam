@@ -1,14 +1,13 @@
 import java.io.IOException;
 import java.util.ArrayList;
 
-import javax.servlet.ServletException;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import database.ThreadLikeSelect;
-import bean.Thread_Bean;
+import database.DBOperator;
 
 
 public class SearchThreadServlet extends HttpServlet{
@@ -16,8 +15,8 @@ public class SearchThreadServlet extends HttpServlet{
 		req.setCharacterEncoding("utf-8");
 
 		String title=req.getParameter("title");
-		ThreadLikeSelect tls = new ThreadLikeSelect();
-		ArrayList threadList=tls.getThread(title);
+		DBOperator tls = (DBOperator)DBFactory.getInstance("threadLikeSelect");
+		ArrayList threadList=tls.getThreadR(title);
 		req.setAttribute("threadList",threadList);
 
 		RequestDispatcher dis = req.getRequestDispatcher("c_thread.jsp");

@@ -1,17 +1,15 @@
 package database;
 
-import java.sql.DriverManager;
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;  //実行するためのもの
-
 import java.util.ArrayList;
 
 import bean.Thread_Bean;
 
-public class ThreadLikeSelect{
-	public ArrayList getThread(String title){
+public class ThreadLikeSelect extends DBOperator{
+	public ArrayList getThreadR(String title){
 		ArrayList<Thread_Bean> threadList = new ArrayList<Thread_Bean>();
 		try{
 			Connection cn = Oracle_Connection.getConnection("kingofC","takato114514");  //送っている

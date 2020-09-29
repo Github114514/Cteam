@@ -1,20 +1,14 @@
 package database;
 
-import java.sql.DriverManager;
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
-import javax.servlet.http.Part;
-
-import java.util.Date;
 import java.util.ArrayList;
 
-
 import bean.Thread_Bean;
-;
 
-public class Thread_Select{
+public class Thread_Select extends DBOperator{
   public ArrayList getThread(){
     ArrayList<Thread_Bean> threadList=new ArrayList<Thread_Bean>();
     try{
@@ -23,16 +17,16 @@ public class Thread_Select{
       System.out.println("接続完了");
       String sql="select * from thread_table order by thread_id";
       Statement st = cn.createStatement();
-			ResultSet rs =st.executeQuery(sql);
+	  ResultSet rs =st.executeQuery(sql);
       while(rs.next()){
-				String thread_id = rs.getString(1);
-				String title = rs.getString(2);
-				String t_name = rs.getString(3);
-				String t_contents = rs.getString(4);
-        String name = rs.getString(5);
-        String thread_time = rs.getString(6);
+		String thread_id = rs.getString(1);
+		String title = rs.getString(2);
+		String t_name = rs.getString(3);
+		String t_contents = rs.getString(4);
+		String name = rs.getString(5);
+		String thread_time = rs.getString(6);
 
-        Thread_Bean tb = new Thread_Bean();
+		Thread_Bean tb = new Thread_Bean();
         tb.setThread_id(thread_id);
         tb.setTitle(title);
         tb.setT_name(t_name);

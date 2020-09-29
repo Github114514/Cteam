@@ -4,9 +4,8 @@ package database;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import javax.servlet.http.Part;
 
-public class Thread_Insert{
+public class Thread_Insert extends DBOperator{
 	public void insertThread(String title,String t_name,String contents,String name){
 		try{
 			Connection cn = Oracle_Connection.getConnection("kingofC","takato114514");

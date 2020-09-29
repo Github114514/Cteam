@@ -1,20 +1,16 @@
 package database;
 
-import java.sql.DriverManager;
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
-
 import java.util.ArrayList;
-import java.util.Date;
 
-import bean.Thread_Bean;
 import bean.Res_Bean;
+import bean.Thread_Bean;
 
-public class Res_Select{
-
-  public ArrayList getThread(String thread_id){
+public class Res_Select extends DBOperator{
+  public ArrayList getThreadR(String thread_id){
     ArrayList< Thread_Bean > threadList = new ArrayList< Thread_Bean >();
     try{
       Connection cn = Oracle_Connection.getConnection("kingofC","takato114514");
@@ -26,11 +22,11 @@ public class Res_Select{
       ResultSet rs = st.executeQuery(sql);
       while(rs.next()){
         rs.getString(1);
-				String title = rs.getString(2);
-				String t_name = rs.getString(3);
-				String t_contents = rs.getString(4);
+		String title = rs.getString(2);
+		String t_name = rs.getString(3);
+		String t_contents = rs.getString(4);
         String name = rs.getString(5);
-				String thread_time = rs.getString(6);
+		String thread_time = rs.getString(6);
         System.out.println("thread_id="+thread_id);
         System.out.println("t_name="+t_name);
         System.out.println("t_contents="+t_contents);

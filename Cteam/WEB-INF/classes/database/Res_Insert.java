@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Res_Insert{
+public class Res_Insert extends DBOperator{
   public void insertRes(String res_id,String thread_id,String name,String contents){
     try{
       Connection cn = Oracle_Connection.getConnection("kingofC","takato114514");
