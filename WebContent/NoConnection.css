@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.Error p{
+  text-decoration: none;
+  color: red;
+}
+
+.Error{
+  text-align: center;
+  position: absolute;
+  margin: 0 auto;
+  font-size: 60px;
+  top:50%;
+}
+
+.Error button{
+  margin-left: 0%;
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 200px;
+  background: #005FFF;
+  color: #FFF;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+.Error button:hover{
+  cursor: pointer;
+  background: #0000ED;;
+  color: #FFF;
+}

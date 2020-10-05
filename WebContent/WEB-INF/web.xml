@@ -66,23 +66,6 @@
 		<servlet-name>SearchThreadServlet</servlet-name>
 		<url-pattern>/SearchThreadServlet</url-pattern>
 	</servlet-mapping>
-	
-
-
-
-	<!-- <servlet>
-		<servlet-name>SearchThreadServlet</servlet-name>
-		<servlet-class>SearchThreadServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>SearchThreadServlet</servlet-name>
-		<url-pattern>/SearchThreadServlet</url-pattern>
-	</servlet-mapping>
- -->
-
-
-
-
 
 <!--
 	<servlet>
@@ -98,4 +81,11 @@
 
 
 
+	<error-page>
+		<error-code>500</error-code><location>/NoConnection.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>exception.OracleConnectionException</exception-type>
+		<location>/NoConnection.jsp</location>
+	</error-page>
 </web-app>

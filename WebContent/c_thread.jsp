@@ -1,5 +1,6 @@
 <%@ page pageEncoding="utf-8"
-		 contentType="text/html;charset=utf-8" %>
+		 contentType="text/html;charset=utf-8"
+		 errorPage="/NoConnection.jsp" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
   <head>
@@ -42,7 +43,7 @@
       <input type='text' name='title'>
       <input type='submit' value='検索！'>
       </from> --%>
-			<table border="1">
+		<table border="1">
         <tr><th>TITLE</th><th>NAME</th><th>COMMENT</th><th>IMAGE</th><th>TIME</th></tr>
         <c:forEach var="tl" items="${threadList}">
   			<tr><td><a href="Res_Servlet?thread_id=${tl.thread_id}">${tl.title}</td>
@@ -55,8 +56,7 @@
 					<td>${tl.name}</td>
 				</c:if>
 					<td>${tl.thread_time}</td></tr>
-  			</c:forEach>
-				<br>
+  		</c:forEach>
       </table>
 		</div>
   </body>

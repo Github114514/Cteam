@@ -7,6 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import bean.Thread_Bean;
+import exception.OracleConnectionException;
 
 public class Thread_Select extends DBOperator{
   public ArrayList getThread(){
@@ -39,9 +40,9 @@ public class Thread_Select extends DBOperator{
       cn.commit();
       cn.close();
     }catch(SQLException e){
-      System.out.println(e.getMessage());
+    	e.printStackTrace();
     }catch (Exception e) {
-      System.out.println(e.getMessage());
+    	throw new OracleConnectionException();
     }
     return threadList;
   }

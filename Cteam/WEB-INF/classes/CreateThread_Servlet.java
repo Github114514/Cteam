@@ -30,6 +30,7 @@ public class CreateThread_Servlet extends HttpServlet{
 
     //プロパティファイルでインスタンス化させる
     OperatorCaller caller= (OperatorCaller)DBFactory.getInstance("caller");
+    //ビジネスロジックレイヤに値を渡す
     caller.insertThread(title,t_name,t_contents,name);
 
     res.sendRedirect("Thread_Servlet");

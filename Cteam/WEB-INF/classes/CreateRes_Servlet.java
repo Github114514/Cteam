@@ -18,7 +18,7 @@ public class CreateRes_Servlet extends HttpServlet{
 
     System.out.println(thread_id);
     OperatorCaller caller= (OperatorCaller)DBFactory.getInstance("caller");
-    caller.insertRes(res_name,res_contents,thread_id,res_id);
+    caller.insertRes(res_id,thread_id,res_name,res_contents);
 
     res.sendRedirect("Res_Servlet?thread_id="+thread_id);
   }

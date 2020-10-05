@@ -17,7 +17,7 @@ public class OperatorCaller{
 	public ArrayList selectThread(){
 		DBOperator ts = (DBOperator)DBFactory.getInstance("threadSelect");
 		 ArrayList threadList = ts.getThread();
-		 return threadList;
+		return threadList;
 	}
 
 	public ArrayList selectResA(String st_thread_id){
